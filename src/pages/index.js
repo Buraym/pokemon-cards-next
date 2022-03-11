@@ -1,9 +1,9 @@
 import axios from "axios";
-import Head from "next/head";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material/";
 import PokemonLine from "./components/Line";
 import Link from "next/link";
+import NextHead from "./components/Head";
 
 export default function Home({ pokemons }) {
   return (
@@ -15,11 +15,7 @@ export default function Home({ pokemons }) {
       alignContent="center"
       wrap="wrap"
     >
-      <Head>
-        <title>Pokemon Cards</title>
-        <meta name="description" content="Pokemon cards NextJS app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextHead title="Pokemon Cards Next JS " />
 
       <Grid
         container
@@ -31,9 +27,16 @@ export default function Home({ pokemons }) {
           height: "100px",
           width: "80vw",
           marginTop: "20px",
+          textShadow: "4px 4px #023047",
         }}
       >
-        <Typography variant="title" fontSize={35}>
+        <Typography
+          variant="title"
+          fontSize={35}
+          fontFamily={"Pacifico"}
+          fontSize={60}
+          color="#d62828"
+        >
           Pokemon Cards Next JS
         </Typography>
       </Grid>

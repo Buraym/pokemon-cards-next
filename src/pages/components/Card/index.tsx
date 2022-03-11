@@ -56,24 +56,62 @@ export default function PokemonCard({ data }) {
   }
 
   function FormatCity(city) {
-    const formatedCity = city
-      .replace(/-/g, " ")
-      .replace(/city/g, "cidade")
-      .replace(/town/g, "cidade")
-      .replace(/route/g, "rota")
-      .replace(/forest/g, "floresta")
-      .replace(/area/g, "")
-      .split(" ");
-    formatedCity.pop();
-    if (formatedCity.length > 3) {
-      var a = formatedCity.length - 3;
+    if (city === "canalave-city-area") {
+      return "Cidade Canalave";
+    } else if (city === "eterna-city-area") {
+      return "Cidade Eterna";
+    } else if (city === "pastoria-city-area") {
+      return "Cidade Pastoria";
+    } else if (city === "sunyshore-city-area") {
+      return "Cidade Sunyshore";
+    } else if (city === "sinnoh-pokemon-league-area") {
+      return "Liga pokemon Sinnoh ";
+    } else if (city === "oreburgh-mine-1f" || city === "oreburgh-mine-b1f") {
+      return "Mina Oreburgh";
+    } else if (city === "valley-windworks-area") {
+      return "Vale windworks";
+    } else if (city === "eterna-forest-area") {
+      return "Floresta de Eterna";
+    } else if (city === "fuego-ironworks-area") {
+      return "Siderurgia Fuego";
+    } else if (city === "mt-coronet-1f-route-207") {
+      return "Mt Coronet Rota 207";
+    } else if (
+      city === "mt-coronet-2f" ||
+      city === "mt-coronet-3f" ||
+      city === "mt-coronet-4f" ||
+      city === "mt-coronet-5f" ||
+      city === "mt-coronet-6f"
+    ) {
+      return "Mt Coronet";
+    } else if (city === "mt-coronet-exterior-snowfall") {
+      return "Queda de neve de Mt Coronet";
+    } else if (city === "mt-coronet-exterior-blizzard") {
+      return "Nevasca de Mt Coronet";
+    } else if (city === "mt-coronet-4f-small-room") {
+      return "Pequena sala de Mt Coronet";
+    } else if (city === "mt-coronet-1f-from-exterior") {
+      return "Mt Coronet perto do exterior";
+    } else {
+      const formatedCity = city
+        .replace(/-/g, " ")
+        .replace(/city/g, "cidade")
+        .replace(/town/g, "cidade")
+        .replace(/route/g, "rota")
+        .replace(/cave/g, "caverna")
+        .replace(/area/g, "")
+        .split(" ");
+      formatedCity.pop();
+      if (formatedCity.length > 3) {
+        var a = formatedCity.length - 3;
 
-      while (formatedCity.length > 3) {
-        formatedCity.pop();
-        a - 1;
+        while (formatedCity.length > 3) {
+          formatedCity.pop();
+          a - 1;
+        }
       }
+      return formatedCity.join(" - ");
     }
-    return formatedCity.join(" - ");
   }
 
   function FormatStat(stat) {
