@@ -98,6 +98,7 @@ export default function PokemonCard({ data }) {
         .replace(/city/g, "cidade")
         .replace(/town/g, "cidade")
         .replace(/route/g, "rota")
+        .replace(/cave/g, "caverna")
         .replace(/area/g, "")
         .split(" ");
       formatedCity.pop();
