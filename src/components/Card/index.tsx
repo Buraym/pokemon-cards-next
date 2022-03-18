@@ -449,11 +449,7 @@ export default function PokemonCard({ data }) {
           </Grid>
         </CardContent>
       </Collapse>
-      <ResponsiveContainer
-        width={"100%"}
-        height={showStats ? "44%" : 0}
-        style={{ marginTop: "10px" }}
-      >
+      <ResponsiveContainer width={"100%"} height={showStats ? "44%" : 0}>
         <RadarChart outerRadius={90} data={listStats}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
