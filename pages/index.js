@@ -32,7 +32,6 @@ export default function Home({ pokemons }) {
       >
         <Typography
           variant="title"
-          fontSize={35}
           fontFamily={"Pacifico"}
           fontSize={60}
           color="#d62828"
