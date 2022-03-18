@@ -1,9 +1,9 @@
 import axios from "axios";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material/";
-import PokemonLine from "./components/Line";
+import PokemonLine from "../src/components/Line";
 import Link from "next/link";
-import NextHead from "./components/Head";
+import NextHead from "../src/components/Head";
 
 export default function Home({ pokemons }) {
   return (

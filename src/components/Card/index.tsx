@@ -1,4 +1,4 @@
-import pokemon from "../../pokemon";
+import pokemon from "../../../pages/pokemon";
 import {
   Grid,
   Card,
@@ -16,7 +16,6 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -25,6 +24,7 @@ import ExpandLessTwoToneIcon from "@mui/icons-material/ExpandLessTwoTone";
 import MoreVertTwoToneIcon from "@mui/icons-material/MoreVertTwoTone";
 import QuestionMarkRoundedIcon from "@mui/icons-material/QuestionMarkRounded";
 import { useState } from "react";
+import PokemonLine from "../Line";
 
 export default function PokemonCard({ data }) {
   const [showStats, setShowStats] = useState(false);

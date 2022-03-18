@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import PokemonCard from "./components/Card/index";
+import PokemonCard from "../src/components/Card/index";
 import { Grid, Typography } from "@mui/material/";
-import NextHead from "./components/Head";
+import NextHead from "../src/components/Head";
 
 export default function pokemon({ data }) {
   return (
