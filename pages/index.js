@@ -6,6 +6,7 @@ import Link from "next/link";
 import NextHead from "../src/components/Head";
 
 export default function Home({ pokemons }) {
+  console.log(pokemons);
   return (
     <Grid
       container
@@ -15,7 +16,7 @@ export default function Home({ pokemons }) {
       alignContent="center"
       wrap="wrap"
     >
-      <NextHead title="Pokemon Cards Next JS " />
+      <NextHead title="Pokemon Cards" />
 
       <Grid
         container
@@ -50,6 +51,7 @@ export default function Home({ pokemons }) {
           marginTop: "20px",
           marginBottom: "20px",
         }}
+        wrap="wrap"
       >
         <Typography variant="title" fontSize={15}>
           Feito por: Brayan Wilis / Com base no repositorio:
@@ -83,16 +85,11 @@ export default function Home({ pokemons }) {
 
 export async function getStaticProps(context) {
   try {
-    const response = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=200"
-    );
-    const pokemons = response.data.results.map((pokeman, index) => {
-      const id = ("00" + (index + 1)).slice(-3);
-      const urlId = index + 1;
-
-      const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`;
-      return { ...pokeman, image, id, urlId };
+    var pokemons = await axios.get("http://localhost:3000/api/getPokemons", {
+      params: { amount: 100 },
     });
+    pokemons = pokemons.data;
+
     return {
       props: { pokemons },
     };

@@ -14,7 +14,7 @@ export default function pokemon({ data }) {
       alignContent="center"
       wrap="wrap"
     >
-      <NextHead title="Pokemon Cards Next JS " />
+      <NextHead title={`Pokemon ${data.pokemon.name}`} />
 
       <Grid
         container

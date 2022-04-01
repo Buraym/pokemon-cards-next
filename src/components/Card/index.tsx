@@ -155,7 +155,11 @@ export default function PokemonCard({ data }) {
           fontWeight="bolder"
           style={{
             color:
-              specie.color.name === "yellow" ? "#ffb703" : specie.color.name,
+              specie.color.name === "yellow"
+                ? "#ffb703"
+                : specie.color.name === "white"
+                ? "lightgray"
+                : specie.color.name,
             padding: "10px",
           }}
         >
@@ -166,7 +170,11 @@ export default function PokemonCard({ data }) {
           fontWeight="bolder"
           style={{
             color:
-              specie.color.name === "yellow" ? "#ffb703" : specie.color.name,
+              specie.color.name === "yellow"
+                ? "#ffb703"
+                : specie.color.name === "white"
+                ? "lightgray"
+                : specie.color.name,
             padding: "10px",
           }}
         >
@@ -179,6 +187,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginBottom: "-6px",
               }}
@@ -222,6 +232,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
               }}
             >
@@ -233,6 +245,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -246,6 +260,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -258,6 +274,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -271,6 +289,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -283,6 +303,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -306,6 +328,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
               }}
             >
@@ -317,6 +341,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -330,6 +356,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -342,6 +370,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
                 marginLeft: "5px",
               }}
@@ -371,6 +401,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
               }}
             >
@@ -383,6 +415,8 @@ export default function PokemonCard({ data }) {
                     color:
                       specie.color.name === "yellow"
                         ? "#ffb703"
+                        : specie.color.name === "white"
+                        ? "lightgray"
                         : specie.color.name,
                   }}
                   fontSize={14}
@@ -410,6 +444,8 @@ export default function PokemonCard({ data }) {
                 color:
                   specie.color.name === "yellow"
                     ? "#ffb703"
+                    : specie.color.name === "white"
+                    ? "lightgray"
                     : specie.color.name,
               }}
             >
@@ -423,6 +459,8 @@ export default function PokemonCard({ data }) {
                       color:
                         specie.color.name === "yellow"
                           ? "#ffb703"
+                          : specie.color.name === "white"
+                          ? "lightgray"
                           : specie.color.name,
                     }}
                     fontSize={14}
@@ -436,6 +474,8 @@ export default function PokemonCard({ data }) {
                     color:
                       specie.color.name === "yellow"
                         ? "#ffb703"
+                        : specie.color.name === "white"
+                        ? "lightgray"
                         : specie.color.name,
                   }}
                   fontSize={14}
@@ -458,10 +498,18 @@ export default function PokemonCard({ data }) {
             name={pokemon.name}
             dataKey="A"
             stroke={
-              specie.color.name === "yellow" ? "#ffb703" : specie.color.name
+              specie.color.name === "yellow"
+                ? "#ffb703"
+                : specie.color.name === "white"
+                ? "lightgray"
+                : specie.color.name
             }
             fill={
-              specie.color.name === "yellow" ? "#ffb703" : specie.color.name
+              specie.color.name === "yellow"
+                ? "#ffb703"
+                : specie.color.name === "white"
+                ? "lightgray"
+                : specie.color.name
             }
             fillOpacity={0.6}
           />
