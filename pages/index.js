@@ -85,9 +85,14 @@ export default function Home({ pokemons }) {
 
 export async function getStaticProps(context) {
   try {
-    var pokemons = await axios.get("http://localhost:3000/api/getPokemons", {
-      params: { amount: 100 },
-    });
+    var pokemons = await axios.get(
+      `${
+        process.env.PRODBASEURL || "http://www.localhost:3000"
+      }/api/getPokemons`,
+      {
+        params: { amount: 100 },
+      }
+    );
     pokemons = pokemons.data;
 
     return {
